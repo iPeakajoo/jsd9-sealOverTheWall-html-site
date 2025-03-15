@@ -4,7 +4,12 @@
 @source "./public/*.{html,js}";
 @plugin "daisyui";
 
-* {
+*{
   font-family: 'Geist', sans-serif;
-
+  /* border: 1px solid red; */
+ 
+  body{
+    padding-top: 100px;
+  }
 }
+

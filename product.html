@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body>
+    <section id="hero" class="relative">
+      <nav
+        id="navbar"
+        class="flex flex-row items-center justify-between p-10 bg-transparent transition-all duration-300 z-10 fixed top-0 right-0 left-0"
+      >
+        <img
+          src="./assets/custommike-navbar-logo.svg"
+          alt=""
+          class="logo w-80"
+        />
+        <div class="relative w-80">
+          <input
+            type="text"
+            placeholder="Search"
+            class="w-full pl-10 pr-4 py-2 border rounded-full bg-gray-100 opacity-50 text-black focus:outline-none focus:ring focus:ring-blue-300"
+          />
+          <i
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-900 fa fa-search"
+          ></i>
+        </div>
+        <div class="right-nav">
+          <ul class="flex flex-row gap-10">
+            <li>
+              <img src="./assets/icon _heart.svg" alt="" class="logo" />
+            </li>
+            <li
+              class="dropdown dropdown-end hover:cursor-pointer"
+              tabindex="0"
+              role="button"
+            >
+              <img src="./assets/icon _user.svg" alt="" class="user" />
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <a class="justify-between">
+                    Profile
+                    <span class="badge">New</span>
+                  </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
+            </li>
+            <li
+              class="dropdown dropdown-end hover:cursor-pointer"
+              tabindex="0"
+              role="button"
+            >
+              <img src="./assets/icon _shopping cart.svg" alt="" class="cart" />
+              <div
+                tabindex="0"
+                class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
+              >
+                <div class="card-body">
+                  <span class="text-lg font-bold">8 Items</span>
+                  <span class="text-">Subtotal: $999</span>
+                  <div class="card-actions">
+                    <button class="btn btn-primary btn-block">View cart</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img src="./assets/icon _globe alt.png" alt="" class="globe" />
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="breadcrumbs pl-10">
+        <ul class="">
+          <li><a>Custommike</a></li>
+          <li><a>DIY</a></li>
+          <li>Shirt</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="w-4/5 mx-auto">
+      <div class="h-[800px] flex justify-center items-center">
+        <div>
+          <img id="mainImage" src="./assets/preview-tshrt.png" alt="" />
+        </div>
+      </div>
+
+      <div class="flex relative items-center gap-4">
+        <button class="absolute left-0 z-10 p-2">
+          <img src="./assets/left-arrow-icon.svg" alt="" class="w-auto h-10" />
+        </button>
+        <div
+          class="flex-1 h-44 shadow-lg border-1 border-gray-200 rounded-xl cursor-pointer"
+        >
+          <img
+            src="./assets/preview-tshrt.png"
+            alt=""
+            class="h-full w-full object-contain"
+            onclick="changeImage(this)"
+          />
+        </div>
+        <div
+          class="flex-1 h-44 shadow-lg border-1 border-gray-200 rounded-xl cursor-pointer"
+        >
+          <img
+            src="./assets/preview-tshrt.png"
+            alt=""
+            class="h-full w-full object-contain"
+            onclick="changeImage(this)"
+          />
+        </div>
+        <div
+          class="flex-1 h-44 shadow-lg border-1 border-gray-200 rounded-xl cursor-pointer"
+        >
+          <img
+            src="./assets/preview-tshrt.png"
+            alt=""
+            class="h-full w-full object-contain"
+            onclick="changeImage(this)"
+          />
+        </div>
+        <div
+          class="flex-1 h-44 shadow-lg border-1 border-gray-200 rounded-xl cursor-pointer"
+        >
+          <img
+            src="./assets/preview-tshrt.png"
+            alt=""
+            class="h-full w-full object-contain"
+            onclick="changeImage(this)"
+          />
+        </div>
+        <button class="absolute right-0 z-10 p-2">
+          <img src="./assets/right-arrow-icon.svg" alt="" class="w-auto h-10" />
+        </button>
+      </div>
+
+      <div class="flex items-center gap-8 py-8 border-b-1 border-gray-200">
+        <div class="flex flex-col">
+          <img src="./assets/custommike-navbar-logo.svg" alt="" class="w-[272px]"/>
+          <p>Create Collect and Express</p>
+        </div>
+        <div class="flex gap-4">
+          <img src="./assets/Responsible.svg" alt="" class="h-[56px] w-auto" />
+          <img src="./assets/Eco.svg" alt="" class="h-[56px] w-auto" />
+          <img src="./assets/Organic.svg" alt="" class="h-[56px] w-auto" />
+        </div>
+      </div>
+
+      <div class="flex justify-between py-8 border-b-1 border-gray-200">
+        <div class="flex items-center">
+          <div
+            class="w-14 h-14 bg-[#334DD8] rounded-full text-white flex items-center justify-center text-2xl font-semibold"
+          >
+            AL
+          </div>
+          <p class="pl-4 text-2xl font-semibold">Artists Lalala</p>
+          <button class="bg-[#334DD8] px-12 py-2 rounded-full text-white ml-20">
+            Follow
+          </button>
+        </div>
+        <div class="flex gap-8">
+          <img
+            src="./assets/t-shirt-option-icon.svg"
+            alt=""
+            class="h-[56px] w-auto"
+          />
+          <img
+            src="./assets/bag-option-icon.svg"
+            alt=""
+            class="h-[56px] w-auto"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-between py-8">
+        <div>
+          <h5 class="text-[40px] font-semibold">T-Shirt Basic</h5>
+          <p class="text-2xl mt-4">599 THB</p>
+          <div class="flex gap-4 mt-6">
+            <p class="text-2xl font-semibold">Sizes</p>
+            <p class="underline">View size chart</p>
+          </div>
+          <div class="flex gap-4 mt-4">
+            <div
+              class="w-12 h-10 rounded-md flex items-center justify-center border-2 text-xl font-semibold"
+            >
+              S
+            </div>
+            <div
+              class="w-12 h-10 rounded-md flex items-center justify-center border-2 text-xl font-semibold"
+            >
+              M
+            </div>
+            <div
+              class="w-12 h-10 rounded-md flex items-center justify-center border-2 text-xl font-semibold"
+            >
+              L
+            </div>
+          </div>
+          <p class="text-2xl font-semibold mt-6">Colors</p>
+          <div class="flex gap-4 mt-4">
+            <div class="w-10 h-10 rounded-full border-1"></div>
+            <div class="w-10 h-10 rounded-full bg-[#5A5959]"></div>
+            <div class="w-10 h-10 rounded-full bg-black"></div>
+            <div class="w-10 h-10 rounded-full bg-[#334DD8]"></div>
+          </div>
+        </div>
+        <div class="w-1/2">
+          <h5 class="text-2xl font-semibold">Print areas</h5>
+          <div class="flex gap-8">
+            <img
+              src="./assets/t-shirt-front-icon.svg"
+              alt=""
+              class="h-[72px] w-auto"
+            />
+            <img
+              src="./assets/t-shirt-back-icon.svg"
+              alt=""
+              class="h-[72px] w-auto"
+            />
+          </div>
+          <p class="text-xl mt-6">
+            30% of the money made from this campaign will be donated to Shelter,
+            a TH based housing charity. Designed by @Artists Lalala on
+            instagram.
+          </p>
+          <button class="p-2 rounded-md border-1 border-gray-200 mt-2">
+            Read More
+          </button>
+          <div class="flex gap-4 mt-6">
+            <button class="p-2 rounded-md bg-gray-300 text-xl">custom</button>
+            <button class="p-2 rounded-md bg-gray-300 text-xl">t-shirt</button>
+            <button class="p-2 rounded-md bg-gray-300 text-xl">collection</button>
+            <button class="p-2 rounded-md bg-gray-300 text-xl">Artists Lalala</button>
+          </div>
+          <div class="flex gap-4 justify-end mt-12">
+            <button class="bg-[#334DD8] px-12 py-2 rounded-full text-white">
+              Add to cart
+            </button>
+            <img src="./assets/heart-wishlist-icon.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex p-4 border-1 rounded-2xl">
+        <div class="w-2/5 px-10 border-r-1">
+          <img src="./assets/Icon-Wash.svg" alt="" class="inline w-12" />
+          <h6 class="inline text-2xl font-semibold">Garment care</h6>
+          <p class="text-xl">
+            Love your garment and it will love you back. Being gentle is easy
+            and better for the planet, it also protects the print and helps
+            maintain shape and colour for longer.
+          </p>
+          <ul class="mt-2">
+            <li>> Wash garment inside out</li>
+            <li>> Only wash your garment on a cold cycle</li>
+            <li>> Do not tumble dry (it’s the worst)</li>
+            <li>> Iron your garment inside out</li>
+          </ul>
+        </div>
+        <div class="w-3/5 pl-20 pr-10">
+          <div class="flex gap-8 border-b-1 pb-4">
+            <div>
+              <img src="./assets/park.svg" alt="" class="inline w-12" />
+              <h6 class="inline text-2xl font-semibold">Most shipping options</h6>
+              <p class="text-xl">From <strong class="text-2xl font-semibold">60 THB</strong></p>
+              <p>Choose from our Economy or Standard shipping</p>
+            </div>
+            <div>
+              <img src="./assets/fast.svg" alt="" class="inline w-12" />
+              <h6 class="inline text-2xl font-semibold">Fastest Delivery</h6>
+              <p class="text-xl">1 day!</p>
+              <p>
+                Order optimized based on customer location<br />
+                (for Bangkok orders only)
+              </p>
+            </div>
+          </div>
+          <div class="mt-4 ">
+            <h6 class="text-xl">Location</h6>
+            <div class="flex gap-2 items-center">
+              <img
+              src="./assets/thai-flag.svg"
+              alt=""
+              class="w-6 h-auto mt-2"
+            />
+            <p>Thailand</p>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-4/5 mx-auto my-8">
+      <h5 class="text-3xl font-bold mb-8">More From This Creator</h5>
+      <div class="grid grid-cols-4 gap-4 ">
+        <div class="w-full h-auto bg-[#F4F4F5]">
+          <div class="overflow-hidden relative">
+            <img
+              src="./assets/t-shirt-1.png"
+              alt=""
+              class="w-full h-auto object-cover"
+            />
+            <img
+              src="./assets/icons_heart.svg"
+              alt=""
+              class="absolute top-5 right-5 w-8 h-8 cursor-pointer"
+            />
+          </div>
+          <div class="p-4">
+            <div class="flex gap-4">
+              <div class="flex">
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+              </div>
+              <p class="text-xl">(276)</p>
+            </div>
+  
+            <h6 class="text-2xl">Inside Squad</h6>
+            <div class="flex justify-between items-center">
+              <p class="text-xl">499 THB</p>
+              <button class="px-10 py-2 rounded-full border-1 bg-white">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="w-full h-auto bg-[#F4F4F5]">
+          <div class="overflow-hidden relative">
+            <img
+              src="./assets/t-shirt-2.png"
+              alt=""
+              class="w-full h-auto object-cover"
+            />
+            <img
+              src="./assets/icons_heart.svg"
+              alt=""
+              class="absolute top-5 right-5 w-8 h-8 cursor-pointer"
+            />
+          </div>
+          <div class="p-4">
+            <div class="flex gap-4">
+              <div class="flex">
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+              </div>
+              <p class="text-xl">(276)</p>
+            </div>
+  
+            <h6 class="text-2xl">Inside Squad</h6>
+            <div class="flex justify-between items-center">
+              <p class="text-xl">499 THB</p>
+              <button class="px-10 py-2 rounded-full border-1 bg-white">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="w-full h-auto bg-[#F4F4F5]">
+          <div class="overflow-hidden relative">
+            <img
+              src="./assets/t-shirt-3.png"
+              alt=""
+              class="w-full h-auto object-cover"
+            />
+            <img
+              src="./assets/icons_heart.svg"
+              alt=""
+              class="absolute top-5 right-5 w-8 h-8 cursor-pointer"
+            />
+          </div>
+          <div class="p-4">
+            <div class="flex gap-4">
+              <div class="flex">
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+              </div>
+              <p class="text-xl">(276)</p>
+            </div>
+  
+            <h6 class="text-2xl">Inside Squad</h6>
+            <div class="flex justify-between items-center">
+              <p class="text-xl">499 THB</p>
+              <button class="px-10 py-2 rounded-full border-1 bg-white">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="w-full h-auto bg-[#F4F4F5]">
+          <div class="overflow-hidden relative">
+            <img
+              src="./assets/t-shirt-4.png"
+              alt=""
+              class="w-full h-auto object-cover"
+            />
+            <img
+              src="./assets/icons_heart.svg"
+              alt=""
+              class="absolute top-5 right-5 w-8 h-8 cursor-pointer"
+            />
+          </div>
+          <div class="p-4">
+            <div class="flex gap-4">
+              <div class="flex">
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+                <img src="./assets/mdi_star.svg" alt="" class="w-6 h-auto" />
+              </div>
+              <p class="text-xl">(276)</p>
+            </div>
+  
+            <h6 class="text-2xl">Inside Squad</h6>
+            <div class="flex justify-between items-center">
+              <p class="text-xl">499 THB</p>
+              <button class="px-10 py-2 rounded-full border-1 bg-white">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    </section>
+
+    <section id="footer" class="bg-[#202020] text-white p-10">
+      <div class="flex justify-between flex-col md:flex-row">
+        <div class="w-full md:w-120">
+          <img
+            src="./assets/custommike-footer-logo.svg"
+            alt=""
+            class="logo w-40"
+          />
+          <h3 class="text-4xl mt-4">
+            Stay in the loop! Sign up <br />for exclusive news & deals!
+          </h3>
+          <div class="relative w-full">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full pl-4 pr-10 py-2 border rounded-full bg-gray-100 mt-4 text-black focus:outline-none focus:ring focus:ring-blue-300"
+            />
+
+            <i
+              class="fas fa-arrow-right absolute right-3 top-2/3 transform -translate-y-1/2 text-gray-900"
+            ></i>
+          </div>
+
+          <p class="text-lg mt-6">
+            By signing up to receive emails from custom mike?. you agree to our
+            Privacy Policy. We treat your info responsibly
+          </p>
+        </div>
+        <div class="w-full md:w-120 mt-10">
+          <div class="flex justify-between">
+            <div class="">
+              <h4 class="text-xl font-semibold">Product</h4>
+              <ul class="text-xl leading-8">
+                <li><a href="#">Shirt</a></li>
+                <li><a href="#">Mug</a></li>
+                <li><a href="#">Tote Bag</a></li>
+              </ul>
+            </div>
+            <div class="">
+              <h4 class="text-xl font-semibold">Creator</h4>
+              <ul class="text-xl">
+                <li><a href="#">Artists</a></li>
+              </ul>
+            </div>
+            <div class="">
+              <h4 class="text-xl font-semibold">About</h4>
+              <ul class="text-xl leading-8">
+                <li><a href="#">News</a></li>
+                <li><a href="#">About us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex gap-4 mt-8">
+            <img src="./assets/facebook-icon.svg" alt="" class="w-8" />
+            <img src="./assets/x-twitter-icon.svg" alt="" class="w-8" />
+            <img src="./assets/instagram-icon.svg" alt="" class="w-8" />
+            <img src="./assets/youtube-icon.svg" alt="" class="w-8" />
+            <img src="./assets/tiktok-icon.svg" alt="" class="w-8" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("bg-white", "shadow-lg", "py-3");
+          navbar.classList.remove("bg-transparent", "py-4");
+        } else {
+          navbar.classList.add("bg-transparent", "py-4");
+          navbar.classList.remove("bg-white", "shadow-lg", "py-3");
+        }
+      });
+
+      function changeImage(thumbnail) {
+        document.getElementById("mainImage").src = thumbnail.src;
+      }
+    </script>
+  </body>
+</html>
