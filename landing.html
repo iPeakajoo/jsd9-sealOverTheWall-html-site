@@ -19,7 +19,8 @@
 
   <body>
     <section id="hero" class="relative">
-      <nav id="navbar"
+      <nav
+        id="navbar"
         class="flex flex-row items-center justify-between p-10 bg-transparent transition-all duration-300 z-10 fixed top-0 right-0 left-0"
       >
         <img
@@ -148,6 +149,10 @@
       </div>
     </section>
 
+    <div class="mt-8">
+      <img src="./assets/banner-1.png" alt="" />
+    </div>
+
     <div class="p-8">
       <h3 class="text-5xl font-semibold text-[#2639A1]">Collection</h3>
       <p class="text-2xl">collected & expressed</p>
@@ -167,80 +172,79 @@
       </div>
     </section>
     <section id="footer" class="bg-[#202020] text-white p-10">
-      
-        <div class="flex justify-between flex-col md:flex-row">
-          <div class="w-full md:w-120">
-            <img
-              src="./assets/custommike-footer-logo.svg"
-              alt=""
-              class="logo w-40"
+      <div class="flex justify-between flex-col md:flex-row">
+        <div class="w-full md:w-120">
+          <img
+            src="./assets/custommike-footer-logo.svg"
+            alt=""
+            class="logo w-40"
+          />
+          <h3 class="text-4xl mt-4">
+            Stay in the loop! Sign up <br />for exclusive news & deals!
+          </h3>
+          <div class="relative w-full">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full pl-4 pr-10 py-2 border rounded-full bg-gray-100 mt-4 text-black focus:outline-none focus:ring focus:ring-blue-300"
             />
-            <h3 class="text-4xl mt-4">
-              Stay in the loop! Sign up <br />for exclusive news & deals!
-            </h3>
-            <div class="relative w-full">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                class="w-full pl-4 pr-10 py-2 border rounded-full bg-gray-100 mt-4 text-black focus:outline-none focus:ring focus:ring-blue-300"
-              />
 
-              <i
-                class="fas fa-arrow-right absolute right-3 top-2/3 transform -translate-y-1/2 text-gray-900"
-              ></i>
-            </div>
-
-            <p class="text-lg mt-6">
-              By signing up to receive emails from custom mike?. you agree
-              to our Privacy Policy. We treat your info responsibly
-            </p>
+            <i
+              class="fas fa-arrow-right absolute right-3 top-2/3 transform -translate-y-1/2 text-gray-900"
+            ></i>
           </div>
-          <div class="w-full md:w-120 mt-10 ">
-            <div class="flex justify-between">
-              <div class="">
-                <h4 class="text-xl font-semibold">Product</h4>
-                <ul class="text-xl leading-8">
-                  <li><a href="#">Shirt</a></li>
-                  <li><a href="#">Mug</a></li>
-                  <li><a href="#">Tote Bag</a></li>
-                </ul>
-              </div>
-              <div class="">
-                <h4 class="text-xl font-semibold">Creator</h4>
-                <ul class="text-xl">
-                  <li><a href="#">Artists</a></li>
-                </ul>
-              </div>
-              <div class="">
-                <h4 class="text-xl font-semibold">About</h4>
-                <ul class="text-xl leading-8">
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">About us</a></li>
-                </ul>
-              </div>
+
+          <p class="text-lg mt-6">
+            By signing up to receive emails from custom mike?. you agree to our
+            Privacy Policy. We treat your info responsibly
+          </p>
+        </div>
+        <div class="w-full md:w-120 mt-10">
+          <div class="flex justify-between">
+            <div class="">
+              <h4 class="text-xl font-semibold">Product</h4>
+              <ul class="text-xl leading-8">
+                <li><a href="#">Shirt</a></li>
+                <li><a href="#">Mug</a></li>
+                <li><a href="#">Tote Bag</a></li>
+              </ul>
             </div>
-            <div class="flex gap-4 mt-8">
-              <img src="./assets/facebook-icon.svg" alt="" class="w-8" />
-              <img src="./assets/x-twitter-icon.svg" alt="" class="w-8" />
-              <img src="./assets/instagram-icon.svg" alt="" class="w-8" />
-              <img src="./assets/youtube-icon.svg" alt="" class="w-8" />
-              <img src="./assets/tiktok-icon.svg" alt="" class="w-8" />
+            <div class="">
+              <h4 class="text-xl font-semibold">Creator</h4>
+              <ul class="text-xl">
+                <li><a href="#">Artists</a></li>
+              </ul>
+            </div>
+            <div class="">
+              <h4 class="text-xl font-semibold">About</h4>
+              <ul class="text-xl leading-8">
+                <li><a href="#">News</a></li>
+                <li><a href="#">About us</a></li>
+              </ul>
             </div>
           </div>
+          <div class="flex gap-4 mt-8">
+            <img src="./assets/facebook-icon.svg" alt="" class="w-8" />
+            <img src="./assets/x-twitter-icon.svg" alt="" class="w-8" />
+            <img src="./assets/instagram-icon.svg" alt="" class="w-8" />
+            <img src="./assets/youtube-icon.svg" alt="" class="w-8" />
+            <img src="./assets/tiktok-icon.svg" alt="" class="w-8" />
+          </div>
+        </div>
       </div>
     </section>
 
     <script>
-      window.addEventListener('scroll', function () {
-          const navbar = document.getElementById('navbar');
-          if (window.scrollY > 50) {
-              navbar.classList.add('bg-white', 'shadow-lg', 'py-3');
-              navbar.classList.remove('bg-transparent', 'py-4');
-          } else {
-              navbar.classList.add('bg-transparent', 'py-4');
-              navbar.classList.remove('bg-white', 'shadow-lg', 'py-3');
-          }
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("bg-white", "shadow-lg", "py-3");
+          navbar.classList.remove("bg-transparent", "py-4");
+        } else {
+          navbar.classList.add("bg-transparent", "py-4");
+          navbar.classList.remove("bg-white", "shadow-lg", "py-3");
+        }
       });
-  </script>
+    </script>
   </body>
 </html>
