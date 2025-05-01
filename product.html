@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -14,10 +14,15 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
   <body>
+
+    
     <section id="hero" class="relative">
       <nav
         id="navbar"
@@ -98,9 +103,9 @@
     </section>
 
     <section class="w-4/5 mx-auto">
-      <div class="h-[800px] flex justify-center items-center">
-        <div>
-          <img id="mainImage" src="./assets/preview-tshrt.png" alt="" />
+      <div class=" flex justify-center items-center pb-8">
+        <div class=" w-1/2 mt-8">
+          <img id="mainImage" src="./assets/doubt-front.jpg" alt="" />
         </div>
       </div>
 
@@ -109,43 +114,43 @@
           <img src="./assets/left-arrow-icon.svg" alt="" class="w-auto h-10" />
         </button>
         <div
-          class="flex-1 h-44 shadow-lg border-1 border-gray-200 rounded-xl cursor-pointer"
+          class="flex-1 h-44 shadow-lg border-1 border-gray-200 bg-white rounded-xl cursor-pointer"
         >
           <img
-            src="./assets/preview-tshrt.png"
+            src="./assets/doubt-front.jpg"
             alt=""
             class="h-full w-full object-contain"
-            onclick="changeImage(this)"
+            onmouseover="changeImage(this)"
           />
         </div>
         <div
-          class="flex-1 h-44 shadow-lg border-1 border-gray-200 rounded-xl cursor-pointer"
+          class="flex-1 h-44 shadow-lg border-1 border-gray-200 bg-white rounded-xl cursor-pointer"
         >
           <img
-            src="./assets/preview-tshrt.png"
+            src="./assets/doubt-fron-female.jpg"
             alt=""
             class="h-full w-full object-contain"
-            onclick="changeImage(this)"
+            onmouseover="changeImage(this)"
           />
         </div>
         <div
-          class="flex-1 h-44 shadow-lg border-1 border-gray-200 rounded-xl cursor-pointer"
+          class="flex-1 h-44 shadow-lg border-1 border-gray-200 bg-white rounded-xl cursor-pointer"
         >
           <img
-            src="./assets/preview-tshrt.png"
+            src="./assets/doubt-back-male.jpg"
             alt=""
             class="h-full w-full object-contain"
-            onclick="changeImage(this)"
+            onmouseover="changeImage(this)"
           />
         </div>
         <div
-          class="flex-1 h-44 shadow-lg border-1 border-gray-200 rounded-xl cursor-pointer"
+          class="flex-1 h-44 shadow-lg border-1 border-gray-200 bg-white rounded-xl cursor-pointer"
         >
           <img
-            src="./assets/preview-tshrt.png"
+            src="./assets/doubt-back-male-2.jpg"
             alt=""
             class="h-full w-full object-contain"
-            onclick="changeImage(this)"
+            onmouseover="changeImage(this)"
           />
         </div>
         <button class="absolute right-0 z-10 p-2">
@@ -542,7 +547,8 @@
       });
 
       function changeImage(thumbnail) {
-        document.getElementById("mainImage").src = thumbnail.src;
+        const img = document.getElementById("mainImage");
+        img.src = thumbnail.src;
       }
     </script>
   </body>
